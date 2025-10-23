@@ -13,8 +13,8 @@ const users = [
 const siteConfig = {
   title: 'AlaCrity' /* title for your website */,
   tagline: 'Scalable, Free and Self-hosted Framework!',
-  cname: 'alacrity.bo',
-  url: 'https://alacrity.bo' /* your website url */,
+  cname: 'alacrityz.vercel.app',
+  url: 'https://alacrityz.vercel.app' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
