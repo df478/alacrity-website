@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Run Locally · AlaCrity</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;br/&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Run Locally · AlaCrity"/><meta property="og:type" content="website"/><meta property="og:url" content="https://alacrity-website.vercel.app//index.html"/><meta property="og:description" content="&lt;br/&gt;"/><meta property="og:image" content="https://alacrity-website.vercel.app/img/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://alacrity-website.vercel.app/img/logo.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo.png" alt="AlaCrity"/><h2 class="headerTitleWithLogo">AlaCrity</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/get-started.html" target="_self">Docs</a></li><li class=""><a href="https://github.com/df478/alacrity" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Do More</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Basics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/get-started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/alacran-definition-file.html">Alacran Definition File</a></li><li class="navListItem"><a class="navItem" href="/docs/deployment-methods.html">Deployment Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/app-configuration.html">App Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/persistent-apps.html">Persistent Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/cli-commands.html">CLI Commands</a></li><li class="navListItem"><a class="navItem" href="/docs/complete-webapp-tutorial.html">Complete Webapp Tutorial</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Do More</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/resource-monitoring.html">Resource Monitoring</a></li><li class="navListItem"><a class="navItem" href="/docs/nginx-customization.html">NGINX Config</a></li><li class="navListItem"><a class="navItem" href="/docs/service-update-override.html">Service Update Override</a></li><li class="navListItem"><a class="navItem" href="/docs/app-scaling-and-cluster.html">App Scaling &amp; Cluster</a></li><li class="navListItem"><a class="navItem" href="/docs/pre-deploy-script.html">Pre-deploy Script</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/run-locally.html">Run Locally</a></li><li class="navListItem"><a class="navItem" href="/docs/certbot-config.html">Certbot Overrides</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Recipes and Tips</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/sample-apps.html">Sample Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/database-connection.html">Database Connection</a></li><li class="navListItem"><a class="navItem" href="/docs/best-practices.html">Best Practices</a></li><li class="navListItem"><a class="navItem" href="/docs/backup-and-restore.html">Backup &amp; Restore</a></li><li class="navListItem"><a class="navItem" href="/docs/recipe-deploy-create-react-app.html">Static React App</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">CI/CD Integration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ci-cd-integration.html">Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/ci-cd-integration/deploy-from-github.html">Deploy from GitHub</a></li><li class="navListItem"><a class="navItem" href="/docs/ci-cd-integration/deploy-from-gitlab.html">Deploy from GitLab</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Help</h3><ul class=""><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Server Purchase</h4><ul><li class="navListItem"><a class="navItem" href="/docs/server-purchase/digitalocean.html">DigitalOcean</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/disk-cleanup.html">Disk Clean-Up</a></li><li class="navListItem"><a class="navItem" href="/docs/firewall.html">Firewall &amp; Port Forwarding</a></li><li class="navListItem"><a class="navItem" href="/docs/troubleshooting.html">Troubleshooting</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/df478/alacrity-website/edit/master/docs/run-locally.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Run Locally</h1></header><article><div><span><p><br/>
+Note that this is an <strong>advanced process</strong>. Some of the concepts used in this section are not easy for the beginners. In order to run AlaCrity on your local machine (just for testing and development) you need Docker installed on your machine.</p>
+<p>As for the root domain, by default, AlaCrity uses <code>http://alacran.alacran.localhost</code>. On most systems, <code>alacran.alacran.localhost</code> automatically resolves to local ip address of the machine, i.e. 127.0.0.1 and therefore no additional work is needed.</p>
+<blockquote>
+<p>However, if it doesn't do that automatically, you need to manually point <code>*.alacran.localhost</code> to <code>127.0.0.1</code> or <code>192.168.1.2</code> (your local ip). <strong>NOTE</strong> that <code>etc/hosts</code> won't be enough as Alacran needs a wildcard entry and <code>etc/hosts</code> does not allow wildcards, i.e. <code>*.something</code>. On ubuntu 16, <code>dnsmasq</code> (a local DNS server) is built-in. So, it's as simple as editing this file: <code>/etc/NetworkManager/dnsmasq.d/dnsmasq-localhost.conf</code> (create it if it does not exist) and adding this line to it: <code>address=/alacran.localhost/192.168.1.2</code> where <code>192.168.1.2</code> is your local IP address. To make sure you have <code>dnsmasq</code>, you can run <code>which dnsmasq</code> on your terminal. If it's available, its path will be printed on the terminal, otherwise, there won't be anything printed on your terminal.</p>
+</blockquote>
+<p>To verify that you have both prerequisites mentioned above:</p>
+<ul>
+<li>Run <code>docker version</code> and make sure your version is at least the version mentioned in the <a href="/docs/get-started.html#c-install-docker-on-server-at-least-version-1706x">docs</a></li>
+<li>Run <code>nslookup randomstring123.alacran.localhost</code> and make sure it resolves to <code>127.0.0.1</code> or your local ip (something like <code>192.168.1.2</code>):</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-attr">Server:</span>     <span class="hljs-number">127.0</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">Address:</span>    <span class="hljs-number">127.0</span><span class="hljs-number">.1</span><span class="hljs-number">.1</span><span class="hljs-comment">#53</span>
+
+<span class="hljs-attr">Name:</span>   <span class="hljs-string">randomstring123.alacran.localhost</span>
+<span class="hljs-attr">Address:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.2</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>Once you have confirmed that you have the prereqs ready, you can go ahead and install Alacran on your machine, similar to what you do on your server. Make sure you run as a user with sufficient permission, i.e. <code>sudo</code> on linux based systems. Just follow the steps outlined here: <a href="get-started#step-1-alacran-installation">Alacran Installation</a>, except for a few differences mentioned below.</p>
+<h3><a class="anchor" aria-hidden="true" id="differences"></a><a href="#differences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Differences:</h3>
+<h4><a class="anchor" aria-hidden="true" id="main-ip"></a><a href="#main-ip" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Main IP</h4>
+<p>First of all, the installation command for local installation requires an extra parameter (<code>MAIN_NODE_IP_ADDRESS</code>)</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">echo</span>  <span class="hljs-string">"{\"skipVerifyingDomains\":\"true\"}"</span> &gt;  /alacran/data/config-override.json
+docker run -e ACCEPTED_TERMS=<span class="hljs-literal">true</span> -e MAIN_NODE_IP_ADDRESS=127.0.0.1 -p 80:80 -p 443:443 -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock -v /alacran:/alacran df478/alacrity
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="setup"></a><a href="#setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup</h4>
+<p>Do not run <code>alacrity serversetup</code>. Instead, go to <a href="http://alacran.alacran.localhost:3000">http://alacran.alacran.localhost:3000</a> and manually set root domain to <code>alacran.localhost</code>. DO NOT enable/force HTTPS. Obviously, you cannot enable HTTPS on your local domain (alacran.localhost).</p>
+<p>Once you set your root domain as <code>alacran.localhost</code>, use <code>alacrity login</code> and enter <code>http://alacran.alacran.localhost</code> as your alacran URL and <code>alacran42</code> as your default password.</p>
+<blockquote>
+<p>However, if you want to access your AlaCrity instance from another device on your LAN, you can set the root domain to <code>alacran.LOCAL_IP.sslip.io</code> (for example <code>alacran.192.168.1.2.sslip.io</code>).</p>
+</blockquote>
+<p><strong>NON-LINUX USERS</strong>
+You need to add <code>/alacran</code> to shared paths.
+To do so, click on the Docker icon -&gt; Setting -&gt; File Sharing and add <code>/alacran</code></p>
+<p>You are set!</p>
+<h2><a class="anchor" aria-hidden="true" id="install-alacrity-on-a-private-local-network"></a><a href="#install-alacrity-on-a-private-local-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install AlaCrity on a Private [local] Network</h2>
+<p>This is handy when you want to install AlaCrity on your home network, for example on a Raspberry pi.</p>
+<p>Imagine you have this network:</p>
+<pre><code class="hljs">┌───────────────────────┐
+│    Your Router        │
+│                       │
+│     public<span class="hljs-built_in"> IP </span>        │
+│    11.22.33.44        │           your private<span class="hljs-built_in"> network
+</span>├───────────────────────┴─────────────────────────────────────────────────────────────────────┐
+│                                                                                             │
+│ ┌────────────────┐      ┌──────────────────┐        ┌──────────────────┐                    │
+│ │                │      │                  │        │                  │                    │
+│ │    PC1         │      │     PC2          │        │       PC3        │                    │
+│ │                │      │                  │        │                  │                    │
+│ │  192.168.1.10  │      │    192.168.1.11  │        │    192.168.1.12  │                    │
+│ │                │      │                  │        │                  │                    │
+│ └────────────────┘      └──────────────────┘        └──────────────────┘                    │
+│                                                                                             │
+│                                                                                             │
+│                                                                                             │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p>You can install AlaCrity on PC3 by simply running this command:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">echo</span>  <span class="hljs-string">"{\"skipVerifyingDomains\":\"true\"}"</span> &gt;  /alacran/data/config-override.json
+docker run -e ACCEPTED_TERMS=<span class="hljs-literal">true</span> -e MAIN_NODE_IP_ADDRESS=192.168.1.12 -p 80:80 -p 443:443 -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock -v /alacran:/alacran df478/alacrity
+</code></pre>
+<p>The only extra bit is this: <code>-e MAIN_NODE_IP_ADDRESS=192.168.1.12</code> and also disabling domain verification on AlaCrity.</p>
+<p>At this point, you should be able to access your AlaCrity dashboard from PC1 and PC2 via <code>http://192.168.1.12:3000</code> on your browser.</p>
+<p>Still you aren't able to deploy apps, but the dashboard should be accessible.
+If the dashboard isn't accessible, you have an internal firewall that prevents PC1 from accessing PC3.</p>
+<p>If the dashboard is accessible, move on to the next stages.</p>
+<h3><a class="anchor" aria-hidden="true" id="option-1---only-internal-usecase"></a><a href="#option-1---only-internal-usecase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>option 1 - only internal usecase:</h3>
+<p>You can install AlaCrity on your internal network so that it's only accessible from your private network. If you want to do that, you have to assign <code>*.alacrityinstance.local</code> or something similar in your local DNS server to point to <code>192.168.1.12</code>. If you don't have a local DNS server you cannot do this.</p>
+<p>Some local DNS servers, don't allow wildcard in the local DNS entries, in that case, you have to add <code>alacran.alacrityinstance.local</code> to point to the IP. and in the future, add your apps names one by one. It's tedious but doable.</p>
+<p>Now, go to the dashboard via <code>http://192.168.1.12:3000</code> and update the root domain to <code>alacrityinstance.local</code>.</p>
+<p>At this point, you should be able to access the dashboard via <code>http://alacran.alacrityinstance.local</code> in your browser.
+If you are having problem here, it means your local DNS server isn't working as expected. You'll have to fix it.</p>
+<p>Note that you should not (cannot) enable HTTPS for internal domains.</p>
+<h3><a class="anchor" aria-hidden="true" id="option-2---make-the-instance-accessible-from-the-outside"></a><a href="#option-2---make-the-instance-accessible-from-the-outside" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>option 2 - make the instance accessible from the outside.</h3>
+<p>requirement: your public IP address must be a static IP address.</p>
+<p>This is very similar to how you install AlaCrity on a publicly available VPS. All you need to do is to enable port forwarding on your router:</p>
+<pre><code class="hljs">port 80 of router =&gt;<span class="hljs-built_in"> port </span>80 of 192.168.1.12<span class="hljs-built_in">
+port </span>443 of router =&gt;<span class="hljs-built_in"> port </span>80 of 192.168.1.12
+</code></pre>
+<p>Now use your regular DNS provider and map <code>*.domain.com</code> to the public IP address of your network.</p>
+<p>Now, like a normal installation, just login to <code>http://192.168.1.12:3000</code> and update the root domain to <code>domain.com</code></p>
+<p>At this point, your instance should be accessible from <code>http://alacran.domain.com</code>. You can enable HTTPS and deploy your apps.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pre-deploy-script.html"><span class="arrow-prev">← </span><span>Pre-deploy Script</span></a><a class="docs-next button" href="/docs/certbot-config.html"><span>Certbot Overrides</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#installation">Installation</a><ul class="toc-headings"><li><a href="#differences">Differences:</a></li></ul></li><li><a href="#install-alacrity-on-a-private-local-network">Install AlaCrity on a Private [local] Network</a><ul class="toc-headings"><li><a href="#option-1---only-internal-usecase">option 1 - only internal usecase:</a></li><li><a href="#option-2---make-the-instance-accessible-from-the-outside">option 2 - make the instance accessible from the outside.</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo.png" alt="AlaCrity" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/get-started.html">Getting Started</a></div><div><h5>More</h5><a href="https://github.com/df478/alacrity" target="_blank">GitHub</a></div></section><section class="copyright">2025 Alacrity</section></footer></div></body></html>
