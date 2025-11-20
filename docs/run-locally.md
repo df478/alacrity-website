@@ -41,9 +41,9 @@ docker run -e ACCEPTED_TERMS=true -e MAIN_NODE_IP_ADDRESS=127.0.0.1 -p 80:80 -p 
 
 #### Setup
 
-Do not run `alacrity-cli serversetup`. Instead, go to http://alacran.alacran.localhost:3000 and manually set root domain to `alacran.localhost`. DO NOT enable/force HTTPS. Obviously, you cannot enable HTTPS on your local domain (alacran.localhost).
+Do not run `alacrity serversetup`. Instead, go to http://alacran.alacran.localhost:3000 and manually set root domain to `alacran.localhost`. DO NOT enable/force HTTPS. Obviously, you cannot enable HTTPS on your local domain (alacran.localhost).
 
-Once you set your root domain as `alacran.localhost`, use `alacrity-cli login` and enter `http://alacran.alacran.localhost` as your alacran URL and `alacran42` as your default password.
+Once you set your root domain as `alacran.localhost`, use `alacrity login` and enter `http://alacran.alacran.localhost` as your alacran URL and `alacran42` as your default password.
 
 > However, if you want to access your AlaCrity instance from another device on your LAN, you can set the root domain to `alacran.LOCAL_IP.sslip.io` (for example `alacran.192.168.1.2.sslip.io`).
 

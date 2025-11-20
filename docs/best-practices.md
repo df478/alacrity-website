@@ -22,7 +22,7 @@ Keep in mind this is not a shield that protects you from everything. It's just a
 
 ### Custom Default Password
 
-AlaCrity uses `alacran42` as its default password. This is usually safe as you can change your password by running `alacrity-cli serversetup` from your local machine right after the server installation is finished. However, this leaves a small window of 30 seconds or so for the attacker to change your password before you. This is very unlikely, but it's possible for this attack to happen. The attacker needs to know the exact attack window on a particular machine. Anyways, to mitigate this risk, simply choose a custom initial password when installing AlaCrity by adding `DEFAULT_PASSWORD` env var to the installation script. For example, the script below changes the default password from `alacran42` to `myinitialpassword`
+AlaCrity uses `alacran42` as its default password. This is usually safe as you can change your password by running `alacrity serversetup` from your local machine right after the server installation is finished. However, this leaves a small window of 30 seconds or so for the attacker to change your password before you. This is very unlikely, but it's possible for this attack to happen. The attacker needs to know the exact attack window on a particular machine. Anyways, to mitigate this risk, simply choose a custom initial password when installing AlaCrity by adding `DEFAULT_PASSWORD` env var to the installation script. For example, the script below changes the default password from `alacran42` to `myinitialpassword`
 
 ```bash
 docker run -e ACCEPTED_TERMS=true -e DEFAULT_PASSWORD='myinitialpassword' -p 80:80 -p 443:443 -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock -v /alacran:/alacran df478/alacrity
@@ -30,7 +30,7 @@ docker run -e ACCEPTED_TERMS=true -e DEFAULT_PASSWORD='myinitialpassword' -p 80:
 
 ### Enforce HTTPS
 
-It is highly recommended that one of the first things you do is to enable HTTPS and enable "Enforce HTTPS" for your AlaCrity dashboard. After you've done all these, you should change your password. Note that if you are using `alacrity-cli serversetup` wizard, you will be doing this process automatically, no need to change your password after the setup.
+It is highly recommended that one of the first things you do is to enable HTTPS and enable "Enforce HTTPS" for your AlaCrity dashboard. After you've done all these, you should change your password. Note that if you are using `alacrity serversetup` wizard, you will be doing this process automatically, no need to change your password after the setup.
 
 ### Use Service Accounts for Git
 

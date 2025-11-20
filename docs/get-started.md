@@ -89,7 +89,7 @@ Assuming you have npm installed on your local machine (e.g., your laptop), simpl
 Then, run
 
 ```bash
- alacrity-cli serversetup
+ alacrity serversetup
 ```
 
 Follow the steps and login to your AlaCrity instance. When prompted to enter the root domain, enter `something.mydomain.com` assuming that you set `*.something.mydomain.com` to point to your IP address in step #2. Now you can access your AlaCrity from `alacran.something.mydomain.com`. You can read more about hiding the root domain [here](./best-practices.md#hidden-root-domain).

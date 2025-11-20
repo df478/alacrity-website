@@ -13,7 +13,7 @@ See [sample apps directory](https://github.com/df478/alacrity/tree/master/alacra
 ## Build on Local Machine
 
 Here is a small step-by-step guide to deploy a `create-react-app` as a static site.
-Unlike the regular `alacrity-cli deploy` that would deploy source files on a `NodeJS` container then build your app and run a small node server to serve your files, this guide shows how you can build locally and deploy the static bundle in a simple static server container.
+Unlike the regular `alacrity deploy` that would deploy source files on a `NodeJS` container then build your app and run a small node server to serve your files, this guide shows how you can build locally and deploy the static bundle in a simple static server container.
 
 The big advantage of this technique is that the build happens on your machine where you already have `node_modules` and probably more computing power than on your server. You also only upload minified files and not the entire codebase. Because of these, the deployment is way faster and less computing intensive for your server.
 
@@ -48,7 +48,7 @@ This `alacran-definition` uses `socialengine/nginx-spa` which is a simple static
 
 #### Create the `tar` file
 
-Now you need to create a `tar` file, usually you don't have to do this because `alacrity-cli deploy` create one from you git repository but here we don't want to put the content of our repository in the `tar` but only the static files and `alacran-definition` file.
+Now you need to create a `tar` file, usually you don't have to do this because `alacrity deploy` create one from you git repository but here we don't want to put the content of our repository in the `tar` but only the static files and `alacran-definition` file.
 
 ```bash
 tar -cvf ./deploy.tar --exclude='*.map' ./alacran-definition ./build/*
@@ -65,7 +65,7 @@ tar -cvf ./deploy.tar --exclude='*.map' ./alacran-definition ./build/*
 Now all we have to do is to use the `alacrity` CLI with a `-t` argument to use our own `tar` file instead of the one made from the git repo.
 
 ```bash
-alacrity-cli deploy -t ./deploy.tar
+alacrity deploy -t ./deploy.tar
 ```
 
 Then answer the questions as usual, wait for the upload and 🎉

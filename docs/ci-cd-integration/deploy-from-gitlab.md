@@ -111,10 +111,10 @@ So far, we have two files in our directory `index.php` and `Dockerfile`. Now let
 `.gitlab-ci.yml`
 ```yaml
 build-docker-master:
-  image: docker:19.03.1
+  image: docker:latest
   stage: build
   services:
-    - docker:19.03.1-dind
+    - docker:dind
   before_script:
     - export DOCKER_REGISTRY_USER=$CI_REGISTRY_USER # built-in GitLab Registry User
     - export DOCKER_REGISTRY_PASSWORD=$CI_REGISTRY_PASSWORD # built-in GitLab Registry Password
@@ -131,9 +131,9 @@ build-docker-master:
     - docker push "$CONTAINER_FULL_IMAGE_NAME_WITH_TAG"
     - echo $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
     - echo "Deploying on AlaCrity..."
-    - docker run df478/cli-alacrity:v1.0.0 alacrity-cli deploy --alacrityUrl $ALACRITY_URL --alacrityPassword $ALACRITY_PASSWORD --alacrityApp $ALACRITY_APP --imageName $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
+    - docker run df478/cli-alacrity:latest alacrity deploy --alacrityUrl $ALACRITY_URL --alacrityPassword $ALACRITY_PASSWORD --alacrityApp $ALACRITY_APP --imageName $CONTAINER_FULL_IMAGE_NAME_WITH_TAG
   only:
-    - master
+    - main
 ```
 
 This is quite self-explanatory. **The best part is that you don't have to make any changes to this file!** It is the same file for all of your repositories regardless of their language or where you deploy them! 
@@ -172,7 +172,7 @@ Error: (HTTP code 404) unexpected - pull access denied for user_name/repo_name, 
 When you use CI/CD, it may be more desirable to avoid storing your password. Instead, you can create app specific tokens to deployment of each app. 
 
 ```
-alacrity-cli deploy --appToken <YOUR_APP_TOKEN_HERE> --alacrityUrl https://alacran.domain.com --imageName YOUR_IMAGE_NAME --appName YOUR_APP_NAME
+alacrity deploy --appToken <YOUR_APP_TOKEN_HERE> --alacrityUrl https://alacran.domain.com --imageName YOUR_IMAGE_NAME --appName YOUR_APP_NAME
 ```
 
 Usually it is more secure to save token in an environment variable, CLI will load it from `ALACRITY_APP_TOKEN` variable.
@@ -181,7 +181,7 @@ Usually it is more secure to save token in an environment variable, CLI will loa
 
 #### Alternative Method
 
-Alternatively, you can use a webhook instead of `docker run df478/cli-alacrity:v1.0.0 alacrity-cli deploy....`. This method is a bit more complex. 
+Alternatively, you can use a webhook instead of `docker run df478/cli-alacrity:latest alacrity deploy....`. This method is a bit more complex. 
 
 The following is NOT A WORKING example. Instead, it's just a hint on what steps are needed for the webhook method to work.
 
